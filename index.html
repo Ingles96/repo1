@@ -4,7 +4,40 @@
     <meta charset="utf-8">
     <title>Josep</title>
   </head>
+
   <body>
+    <?php
+    /**
+     * Permitir la conexion contra la base de datos
+     */
+    class bd
+    {
+      //Atributos necesarios para la conexion
+      private $host="localhost";
+      private $user="futbol";
+      private $pass="futbol123";
+      private $db_name="futbol";
+
+      //Conector
+      private $conexion;
+
+      //Propiedades para controlar errores
+      private $error=false;
+
+      function __construct()
+      {
+          $this->conexion = new mysqli($this->host, $this->user, $this->pass, $this->db_name);
+          if ($this->conexion->connect_errno) {
+            $this->error=true;
+          }
+
+getClientes(){
+  
+}
+
+      }
+
+     ?>
 
   </body>
 </html>
